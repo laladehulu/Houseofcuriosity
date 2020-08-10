@@ -1,0 +1,55 @@
+
+{{>header}}
+
+
+<link type="text/css" href="/assets/css/add-seminar.css" rel="stylesheet">
+
+<div class="main">
+    <form class=" " action="/user/jointeacher" method="POST" enctype="multipart/form-data">
+        <fieldset class="">
+        
+      
+        <legend class="pl-3">Be A Teacher</legend>
+        
+        
+        <div class="form-group ">
+          <label class="col-md-4 control-label" for="textinput">Your bio </label>  
+          <div class="col-md-12">
+             <input id="textinput" name="teacher[description]" type="text" value="{{title}}" placeholder="Hi! I like to teach"class="form-control input-md">
+            
+          </div>
+        </div>
+            <div class="form-group ">
+          <label class="col-md-4 control-label" for="textinput">Profile Photo</label>  
+          <div class="col-md-12">
+             <input id="textinput" name="teacher[photo]" type="file" placeholder="placeholder" class="form-control input-md">
+            
+          </div>
+        </div>
+        
+         <div class="form-group ">
+          <label class="col-md-12 control-label" for="textinput">Your hobbies/specialties(seperated by comma)</label>  
+          <div class="col-md-12">
+             <input id="textinput" name="teacher[specialties]" type="text" value="{{description}}" placeholder="programming, networking programming, game development" class="form-control input-md">
+            
+          </div>
+        </div>
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="jointeacher"></label>
+          <div class="col-md-4">
+            <button type="submit" id="publishSeminar" name="publishSeminar" class="btn bg-primary btn-dark">Create</button>
+          </div>
+        </div>
+        
+        </fieldset>
+        </form>
+
+        
+</div>
+    </body>
+{{>footer}}
+{{>footer}}
+</div>
+    </body>
+{{>footer}}

@@ -1,0 +1,55 @@
+
+
+{{>header}}
+<link type="text/css" href="/assets/css/teacher-profile.css" rel="stylesheet">
+<link type="text/css" href="/assets/css/control-seminar.css" rel="stylesheet">
+<div class="main">
+    <div class="container-group">
+        <div class="seminar-container">
+            <div class="tabs"></div>
+            <div class="seminars-div mt-5">
+                
+            </div>
+            <h2>Seminars <a class="btn btn-dark" href="/teacher/seminar/add">Add</a></h2>
+            <hr>
+            {{#seminars}}
+        <a href="/teacher/seminar/{{_id}}">
+             <div class="seminar">
+            <div class="seminar-date"><span>Jan.19</span></div>
+            <div class="seminar-text">
+                <h2 class="seminar-title">{{title}}</h2>
+                <div class="seminar-lead">{{description}}</div>
+            </div>
+                  
+        </div>
+     
+        </a>
+        {{/seminars}}
+            
+        </div>
+        {{#teacher}}
+        <div class="info">
+            <div class="grid-container">
+                <div class="info-grid-item ">
+                    <img src="/{{photo}}">
+                </div>
+                <div class="info-grid-item info-interest">
+                    {{#specialties}}
+                    <span class="tag">
+                       {{.}}
+                    </span>
+                    {{/specialties}}
+           
+                    
+                </div>
+                <div class="info-grid-item text-center">
+                   {{description}}
+                </div>
+            </div>
+        </div>
+        {{/teacher}}
+
+    </div>
+</div>
+    </body>
+{{>footer}}

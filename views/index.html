@@ -1,0 +1,49 @@
+{{>header}}
+{{>header}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <a class="ml-4"> </a>
+  <a class="ml-5 pl-5 navbar-brand" href="#">House of Curiosity</a>
+  <div class="collapse navbar-collapse" id="navbar_example_1">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+              
+          </li>
+      </ul>
+
+  </div>
+</nav>
+<link type="text/css" href="/assets/css/index.css" rel="stylesheet">
+<div class="main content">
+    <div class="header mt-5 pt-5 mb-5 pb-5">
+        <h1 >Share Your Professions</h1>
+        <p class="lead">House of Curiosity is a flatform which everyone could share their knowledge</p>
+        <a href="/teacher/"class="btn btn-dark text-light" >Teach</a>
+    </div>
+    <h2>Upcoming Seminars</h2>
+    <div class="upcoming">
+        {{#recentSeminar}}
+        <a href="/seminar/{{_id}}">
+        <div class="seminar-card">
+            <div class="pic"><img src="\{{seminarCover}}"></div>
+            <div class="seminar-content-container">
+            <div class="lead">
+                {{date}}
+            </div>           
+            <h5 class="h3">
+                {{title}}
+            </h5>
+                 
+            </div>
+
+        </div>
+        </a>
+
+        {{/recentSeminar}}   
+        
+    </div>
+</div>
+
+{{>footer}}

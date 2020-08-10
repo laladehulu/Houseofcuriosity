@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.sidebar{
+    width: 200px;
+    position: fixed;
+
+    background-color: gray;
+    height: 100vh;
+    padding: 20px;
+    padding-left: 0px;
+    box-sizing: border-box;
+    background-color: #222216;
+    color: white;
+    
+}
+.refs{
+    margin-left: 20px;
+}
+.sidebar a{
+    display: block;
+    margin-bottom: 50px;
+}
+.profile{
+ 
+    text-align:center;
+}
+.profile p{
+    width: 100%;
+}
+    .circle{
+        margin: auto;
+        overflow: hidden;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+
+    }
+    .circle img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .profile span{
+        display: block;
+        margin-top: 20px;
+    }
+
+.content{
+    margin-left: 200px;
+}
+.jubontron{
+    padding: 50px;
+    padding-left: 100px;
+    text-align:left;
+    
+}
+.content-main{
+     padding: 50px;
+    padding-left: 100px;
+    text-align: left;
+}
+.date{
+    text-align: center;
+    margin-top: 80px;
+}
+.countdown{
+    display: inline-block;
+    padding: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1rem;
+    background-color:#fcffe6;
+    box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.31);
+    
+    margin: 30px 60px;
+}
+.countdown>div{
+    font-weight: 800;
+    font-size: 3rem;
+}
+.topics-section{
+     text-align:center;
+    background-color:#fffbfb;
+    height: 50vh;
+    padding: 20px;
+}
+.topics-container{
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px 120px;
+    justify-content: space-around;
+
+}
+.topic{
+    display: inline-block;
+    border: 1px solid rgba(157, 157, 157, 0.27);
+    padding: 20px;
+    max-width: 200px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 1px 1px #ffffff;
+}

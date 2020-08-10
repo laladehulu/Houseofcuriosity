@@ -1,0 +1,92 @@
+{{>header}}
+<link type="text/css" href="/assets/css/view-seminar.css" rel="stylesheet">
+
+<div class="main">
+    {{#teacher}}
+    <div class="sidebar">
+        <a class="profile" >
+             <div class="circle"><img src="/{{photo}}"></div>
+            <p>{{name}}</p>
+        </a>
+        <div class="refs">
+                        <a href="#date">Date</a>
+            <a>Info</a>
+            <a>Comments</a>
+        </div>
+
+ 
+
+    </div>
+      {{/teacher}}
+    {{#seminar}}
+
+    <div class="content">
+        <div class="jubontron bg-dark">
+            <h1 class="text-white">{{title}}</h1>
+        </div>
+        <div class="content-main">
+            <div class="description">
+                <h2>About the seminar</h2>
+                {{description}}
+            </div>
+        <div class="date">
+           
+        
+             <h1>Time Till Open</h1>
+            <div class="countdown "><div class="day">00</div>
+            <p>Days</p>
+            </div>
+            <div class="countdown"><div class="hour">00</div>
+            
+             <p>Hours</p></div>
+            <div class="countdown "><div class="minute">00</div>
+            <p>Minutes</p></div>
+                <h4 id="date">{{date}}</h4>
+        </div>
+        <div>
+        </div>
+  
+        <div class="topics-section mt-5">
+               <h2>Skills you will learn</h2>
+           <div class="topics-container">
+                    
+                        <div class="topic">How to design a modenr website</div>
+                    <div class="topic">How to design a modenr website</div>
+                      <div class="topic">How to design a modenr website</div>
+            </div>
+        </div>
+        </div>
+       
+ 
+        
+    </div>
+        {{/seminar}}
+</div>
+<script>
+    function StartTimer(){
+        var dateString = document.querySelector("#date");
+        var dayElement = document.querySelector(".day"),
+        hourElement = document.querySelector(".hour"),
+        minuteElement = document.querySelector(".minute")
+        seminarDate =  new Date(dateString.innerHTML);
+        dateString.innerHTML = seminarDate.toString();
+        var diff,min, hour,day;
+        function countdown(){
+             diff = (seminarDate.getTime()-(new Date).getTime())/1000;
+            console.log(diff);
+            diff= Math.trunc(diff/60);
+             day = diff/1440;
+            diff= diff%1440;
+            hour= diff/60;
+            min = diff%60;
+           
+            dayElement.innerHTML = Math.trunc(day);
+            hourElement.innerHTML = Math.trunc(hour);
+            minuteElement.innerHTML = Math.trunc(min);
+            console.log(hour,min);
+        }
+        setInterval(countdown,1000);
+    }
+    StartTimer();
+</script>
+{{>footer}}

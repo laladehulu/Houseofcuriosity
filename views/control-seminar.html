@@ -1,0 +1,34 @@
+
+{{>header}}
+<link type="text/css" href="/assets/css/control-seminar.css" rel="stylesheet">
+<div class="main">
+   <div class="main pb-5">
+    <div class="container">
+        <div class="mt-5 mb-5 pb-5 clearfix">
+            <h1  class="float-left ">Your Seminars</h2>
+            <a class="btn btn-light text-dark float-right" href="/teacher/seminar/add">Add</a>
+        </div>
+               <hr>
+        {{#seminars}}
+        <a href="/teacher/seminar/{{_id}}">
+             <div class="seminar">
+            <div class="seminar-date">Jan.19</div>
+            <div class="seminar-text">
+                <h2 class="seminar-title">{{title}}</h2>
+                <div class="seminar-lead">{{description}}</div>
+            </div>
+                  
+        </div>
+            <hr>
+        </a>
+        {{/seminars}}
+    </div>
+   
+    
+        
+</div>
+
+        
+</div>
+ 
+{{>footer}}

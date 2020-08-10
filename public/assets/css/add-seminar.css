@@ -1,0 +1,11 @@
+form{
+    width: 40%;
+    margin: 50px auto;
+    box-shadow: 10px 10px 10px rgba(28, 28, 28, 0.25);
+        background: #ffffff;
+    padding: 50px 60px;
+}
+body{
+    padding: 0;
+    background: #e2e847;
+}

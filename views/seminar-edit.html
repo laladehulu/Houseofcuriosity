@@ -1,0 +1,47 @@
+
+{{>header}}
+
+<div class="main">
+    <form class=" " action="/teacher/seminar/{{_id}}?_method=put" method="POST" enctype="multipart/form-data">
+        <fieldset class="">
+        
+      
+        <legend>Update Seminar</legend>
+        
+        
+        <div class="form-group ">
+          <label class="col-md-4 control-label" for="textinput">name</label>  
+          <div class="col-md-4">
+             <input id="textinput" name="seminar[title]" type="text" value="{{title}}" class="form-control input-md">
+            
+          </div>
+        </div>
+            <div class="form-group ">
+          <label class="col-md-4 control-label" for="textinput">Seminar Image</label>  
+          <div class="col-md-4">
+             <input id="textinput" name="seminar[cover]" type="file" placeholder="placeholder" class="form-control input-md">
+            
+          </div>
+        </div>
+         <div class="form-group ">
+          <label class="col-md-4 control-label" for="textinput">description</label>  
+          <div class="col-md-4">
+             <input id="textinput" name="seminar[description]" type="text" value="{{description}}" class="form-control input-md">
+            
+          </div>
+        </div>
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="jointeacher"></label>
+          <div class="col-md-4">
+            <button type="submit" id="publishSeminar" name="publishSeminar" class="btn btn-primary">Update</button>
+          </div>
+        </div>
+        
+        </fieldset>
+        </form>
+
+        
+</div>
+    </body>
+{{>footer}}

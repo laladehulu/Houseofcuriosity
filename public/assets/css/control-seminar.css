@@ -1,0 +1,33 @@
+.seminar{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "date text picture" "date text picture";
+    cursor: pointer;
+    padding-bottom: 10px;
+    color: black;
+    --dash:black;
+    --dashsize:1px;
+    transition:  3s ease all;
+   
+}
+.seminar:hover{
+    --dash:blue;
+    --dashsize:3px;
+}
+    .seminar-date{
+        height: 20px;
+        padding: 10px 0 20px 0;
+        grid-area: 1 / 1 / span 2 / 2;
+        
+        width: auto;
+    }
+        .seminar-date span{
+            transition:  0.2s linear all;
+    border-bottom: var(--dashsize) solid var(--dash);
+        }
+    .seminar-text{
+        grid-area: text;
+        height: 100%;
+        color: rgba(46, 46, 46, 0.71);
+    }

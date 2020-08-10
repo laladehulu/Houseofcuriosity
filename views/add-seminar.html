@@ -1,0 +1,59 @@
+
+{{>header}}
+
+
+<link type="text/css" href="/assets/css/add-seminar.css" rel="stylesheet">
+
+<div class="main">
+    <form class=" " action="/teacher/seminar/" method="POST" enctype="multipart/form-data">
+        <fieldset class="">
+        
+      
+        <legend class="pl-3">Create Seminar</legend>
+        
+        
+        <div class="form-group ">
+          <label class="col-md-4 control-label" for="textinput">name</label>  
+          <div class="col-md-12">
+             <input id="textinput" name="seminar[title]" type="text" value="{{title}}" class="form-control input-md">
+            
+          </div>
+        </div>
+            <div class="form-group ">
+          <label class="col-md-4 control-label" for="textinput">Seminar Image</label>  
+          <div class="col-md-12">
+             <input id="textinput" name="seminar[cover]" type="file" placeholder="placeholder" class="form-control input-md">
+            
+          </div>
+        </div>
+        <div class="form-group">
+         <label class="col-md-4 control-label" for="textinput">Time(PST)</label>
+            <input type="date" name="seminar[date][date]">
+            <input type="time" name="seminar[date][time]">
+        </div>
+         <div class="form-group ">
+          <label class="col-md-4 control-label" for="textinput">description</label>  
+          <div class="col-md-12">
+             <input id="textinput" name="seminar[description]" type="text" value="{{description}}" class="form-control input-md">
+            
+          </div>
+        </div>
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="jointeacher"></label>
+          <div class="col-md-4">
+            <button type="submit" id="publishSeminar" name="publishSeminar" class="btn bg-primary btn-dark">Create</button>
+          </div>
+        </div>
+        
+        </fieldset>
+        </form>
+
+        
+</div>
+    </body>
+{{>footer}}
+{{>footer}}
+</div>
+    </body>
+{{>footer}}
